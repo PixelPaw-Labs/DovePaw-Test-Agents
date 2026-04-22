@@ -53,6 +53,7 @@ async function main() {
     taskName: "pixelpaw-qa",
     timeoutMs: TIMEOUT_MS,
     skipGitRepoCheck: true,
+    model: "gpt-5.4-mini",
   });
 
   log(`Codex exited with code: ${code}`);
