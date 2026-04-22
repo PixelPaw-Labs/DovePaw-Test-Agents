@@ -1,10 +1,9 @@
 import { join } from "node:path";
 import {
-  ClaudeRunner,
+  CodexRunner,
   createLogger,
   makeTimestamp,
   cleanupOldLogs,
-  AUTONOMY_PREFIX,
   agentPersistentLogDir,
 } from "@dovepaw/agent-sdk";
 
@@ -47,17 +46,17 @@ async function main() {
   log("=== PixelPaw EM started ===");
   publishStatusToUI("Alex Rivera (EM) is working…");
 
-  const prompt = [AUTONOMY_PREFIX, "", PROMPT_BODY, "", `Instruction: ${INSTRUCTION}`].join("\n");
+  const prompt = [PROMPT_BODY, "", `Instruction: ${INSTRUCTION}`].join("\n");
 
-  const runner = new ClaudeRunner(LOG_DIR, LOG_FILE);
+  const runner = new CodexRunner(LOG_DIR);
   const { code, stdout } = await runner.run(prompt, {
     cwd: WORK_DIR,
     taskName: "pixelpaw-em",
     timeoutMs: TIMEOUT_MS,
-    permissionMode: "readOnly",
+    skipGitRepoCheck: true,
   });
 
-  log(`Claude CLI exited with code: ${code}`);
+  log(`Codex exited with code: ${code}`);
   log(stdout);
   log("=== PixelPaw EM finished ===");
   cleanupOldLogs(LOG_DIR, ["pixelpaw-em-"], 30);
