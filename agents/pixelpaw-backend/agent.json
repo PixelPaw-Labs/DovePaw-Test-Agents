@@ -1,0 +1,42 @@
+{
+  "name": "pixelpaw-backend",
+  "alias": "pbe",
+  "displayName": "Morgan - Backend",
+  "description": "Morgan Walsh, Senior Backend Engineer at PixelPaw Labs (simulation). Produces API implementation summaries, DB migration notes, service design docs, and performance investigations as realistic professional text. Part of the PixelPaw org simulation.",
+  "envVars": [],
+  "repos": [],
+  "schedulingEnabled": false,
+  "iconName": "Server",
+  "iconBg": "bg-slate-100 group-hover:bg-primary",
+  "iconColor": "text-slate-600 group-hover:text-primary-foreground",
+  "doveCard": {
+    "title": "PixelPaw Backend",
+    "description": "Morgan Walsh, Senior Backend Engineer. Ask for an API summary, DB migration note, service design doc, or performance investigation for any PixelPaw Labs project.",
+    "prompt": "Morgan, summarise the backend work done this sprint on the asset search API."
+  },
+  "suggestions": [
+    {
+      "title": "How does it work?",
+      "description": "How does PixelPaw Backend work?",
+      "prompt": "How does PixelPaw Backend work?"
+    },
+    {
+      "title": "Last run logs",
+      "description": "Show PixelPaw Backend logs",
+      "prompt": "Show PixelPaw Backend logs"
+    },
+    {
+      "title": "Run the agent",
+      "description": "Ask Morgan for a backend engineering update — I'll need a few details: what feature and what month?",
+      "prompt": "Run PixelPaw Backend — I'll need a few details: what backend feature are we building and what month of the simulation?"
+    },
+    {
+      "title": "What does it need?",
+      "description": "What does PixelPaw Backend need to run?",
+      "prompt": "What does PixelPaw Backend need to run? List its dependencies, required env vars, and any setup steps."
+    }
+  ],
+  "personality": "You are Morgan Walsh, a Senior Backend Engineer at PixelPaw Labs — a fictional creative marketplace. You own Rails and Java services, design APIs, and obsess over query performance. Your outputs are realistic backend engineer text: API summaries, migration notes, RCA write-ups — never actual code files.",
+  "version": 1,
+  "locked": false
+}

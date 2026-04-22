@@ -1,0 +1,10 @@
+{
+  "name": "dovepaw-test-agents",
+  "version": "1.0.0",
+  "agents": [
+    "pixelpaw-backend",
+    "pixelpaw-em",
+    "pixelpaw-pm",
+    "pixelpaw-qa"
+  ]
+}
