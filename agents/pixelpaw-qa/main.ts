@@ -1,6 +1,6 @@
 import { join } from "node:path";
 import {
-  CodexRunner,
+  AgentRunner,
   createLogger,
   makeTimestamp,
   cleanupOldLogs,
@@ -47,13 +47,13 @@ async function main() {
 
   const prompt = [PROMPT_BODY, "", `Instruction: ${INSTRUCTION}`].join("\n");
 
-  const runner = new CodexRunner(LOG_DIR);
+  const runner = new AgentRunner(LOG_DIR);
   const { code, stdout } = await runner.run(prompt, {
     cwd: WORK_DIR,
     taskName: "pixelpaw-qa",
     timeoutMs: TIMEOUT_MS,
-    skipGitRepoCheck: true,
     model: "gpt-5.4-mini",
+    codexOpts: { skipGitRepoCheck: true },
   });
 
   log(`Codex exited with code: ${code}`);
