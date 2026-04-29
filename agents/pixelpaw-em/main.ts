@@ -54,7 +54,7 @@ async function main() {
     taskName: "pixelpaw-em",
     timeoutMs: TIMEOUT_MS,
     model: "gpt-5.4-mini",
-    codexOpts: { skipGitRepoCheck: true },
+    codexOpts: { sandboxMode: "danger-full-access", skipGitRepoCheck: true },
   });
 
   log(`Codex exited with code: ${code}`);
