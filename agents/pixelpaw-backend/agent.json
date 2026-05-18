@@ -3,7 +3,14 @@
   "alias": "pbe",
   "displayName": "Morgan - Backend",
   "description": "Morgan Walsh, Senior Backend Engineer at PixelPaw Labs (simulation). Produces API implementation summaries, DB migration notes, service design docs, and performance investigations as realistic professional text. Part of the PixelPaw org simulation.",
-  "envVars": [],
+  "envVars": [
+    {
+      "id": "a570c9c9-4e2e-40d0-b560-5082adab9dc7",
+      "key": "AGENT_SCRIPT_MODEL",
+      "value": "gpt-5.4",
+      "isSecret": false
+    }
+  ],
   "repos": [],
   "schedulingEnabled": false,
   "iconName": "Server",

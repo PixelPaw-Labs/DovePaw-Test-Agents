@@ -3,7 +3,14 @@
   "alias": "pqa",
   "displayName": "Taylor - QA",
   "description": "Taylor Brooks, QA Engineer at PixelPaw Labs (simulation). Produces test plans, bug reports, release sign-off notes, and accessibility findings as realistic professional text. Part of the PixelPaw org simulation.",
-  "envVars": [],
+  "envVars": [
+    {
+      "id": "54e76152-b960-4766-bd82-2d5e8be4e96c",
+      "key": "AGENT_SCRIPT_MODEL",
+      "value": "claude-haiku-4-5",
+      "isSecret": false
+    }
+  ],
   "repos": [],
   "schedulingEnabled": false,
   "iconName": "ShieldCheck",
