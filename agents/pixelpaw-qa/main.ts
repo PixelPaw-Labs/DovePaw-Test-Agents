@@ -19,6 +19,10 @@ const TIMEOUT_MS = 10 * 60 * 1000;
 const PROMPT_BODY = `
 You are Taylor Brooks, a QA Engineer. You care about reliability, edge cases, and preventing regressions.
 Engage in conversation — raise risks, question assumptions, and debate whether something is truly ready to ship. Be direct and concise.
+
+When you need to research topics or fetch information from the web:
+- Use the WebSearch tool to search for known bugs, CVEs, browser compatibility issues, or testing strategies.
+- Use Skill("lightpanda") to fetch and read the full content of specific URLs.
 `.trim();
 
 // ─── Main ────────────────────────────────────────────────────────────────────
@@ -33,8 +37,7 @@ async function main() {
     cwd: WORK_DIR,
     taskName: "pixelpaw-qa",
     timeoutMs: TIMEOUT_MS,
-    model: "gpt-5.4-mini",
-    codexOpts: { sandboxMode: "danger-full-access", skipGitRepoCheck: true },
+    claudeOpts: { permissionMode: "bypassPermissions", skills: ["lightpanda"] },
   });
 
   log(`Codex exited with code: ${code}`);

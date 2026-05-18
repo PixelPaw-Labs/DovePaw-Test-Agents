@@ -19,6 +19,10 @@ const TIMEOUT_MS = 10 * 60 * 1000;
 const PROMPT_BODY = `
 You are Sam Chen, a Product Manager. You care about user value, business outcomes, and prioritisation.
 Engage in conversation — advocate for the user, debate scope and timelines, and push back on ideas that don't move the needle. Be direct and concise.
+
+When you need to research topics or fetch information from the web:
+- Use the WebSearch tool to search for user research, market data, competitor analysis, or product insights.
+- Use Skill("lightpanda") to fetch and read the full content of specific URLs.
 `.trim();
 
 // ─── Main ────────────────────────────────────────────────────────────────────
@@ -33,8 +37,7 @@ async function main() {
     cwd: WORK_DIR,
     taskName: "pixelpaw-pm",
     timeoutMs: TIMEOUT_MS,
-    model: "gpt-5.4-mini",
-    codexOpts: { sandboxMode: "danger-full-access", skipGitRepoCheck: true },
+    claudeOpts: { permissionMode: "bypassPermissions", skills: ["lightpanda"] },
   });
 
   log(`Codex exited with code: ${code}`);
