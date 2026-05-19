@@ -38,6 +38,7 @@ async function main() {
     taskName: "pixelpaw-backend",
     timeoutMs: TIMEOUT_MS,
     claudeOpts: { permissionMode: "bypassPermissions", skills: ["lightpanda"] },
+    codexOpts: { sandboxMode: "workspace-write", networkAccessEnabled: true },
   });
 
   log(`Codex exited with code: ${code}`);
