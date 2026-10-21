@@ -7,7 +7,7 @@
     {
       "id": "65ddfb38-e7d0-4cc5-b9f2-3b9b6d8918fe",
       "key": "AGENT_SCRIPT_MODEL",
-      "value": "gpt-5.4-mini",
+      "value": "gpt-6-luna",
       "isSecret": false
     }
   ],

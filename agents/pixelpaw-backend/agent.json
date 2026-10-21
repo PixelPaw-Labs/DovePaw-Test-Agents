@@ -7,7 +7,7 @@
     {
       "id": "a570c9c9-4e2e-40d0-b560-5082adab9dc7",
       "key": "AGENT_SCRIPT_MODEL",
-      "value": "gpt-5.4",
+      "value": "gpt-6.1-sol",
       "isSecret": false
     }
   ],
